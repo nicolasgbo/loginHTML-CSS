@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /* Para ocupar toda a altura */
+}
+
+body {
+    /*Colocando a imagem de fundo*/
+    background-image: url('video/backgroundVideo.gif');
+    background-size: cover;
+    position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Faz com que o contêiner ocupe o espaço restante */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+h3 {
+    text-align: center;
+    color:#aa23a3;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', Arial, Helvetica, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Fixa a sobreposição ao fundo */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('video/backgroundVideo.gif');
+    background-size: cover;
+    filter: blur(5px); /* Efeito de desfocagem */
+    z-index: -1; /* Coloca a imagem de fundo atrás do conteúdo */
+}
+
+.formLogin {
+    background-color: #460058e6;
+    font-size: 25px;
+    padding: 20px;
+    margin:0 auto;
+    width: 50%;
+    border-radius: 25px 10px 25px 10px;
+    max-width: 300px;
+    background: linear-gradient(to top, #000000, #460058e6);
+    box-shadow: 10px 10px 5px rgb(170, 35, 163, 0.9)
+    
+}
+.formLogin p {
+    padding-top: 15px;
+    font-family: 'Chakra Petch', Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.formLogin p a {
+    color: #aa23a3; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+/*Adicionando o sublinhado quando eu passo o mouse*/
+.formLogin p a:hover {
+    text-decoration: underline;
+}
+
+input[type=email], [type=password]{
+    background-color: rgb(70, 0, 88, 0.5);
+    font-family: 'Chakra Petch', Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 1pc;
+    width: 100%;
+    padding: 15px;
+    margin: 7px 0;
+    display: inline-block;
+    border: 1px solid #aa23a3;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+button[type=submit] {
+    background-color: #aa23a3;
+    font-family: 'Chakra Petch';
+    font-size: 1pc;
+    color: #fff;
+    width: 100%;
+    margin-top: 4px;
+    padding: 7px;
+    border: 1px solid #aa23a3;
+    border-radius: 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+button[type=submit]:hover{
+    background-color: #d34ecc;
+}
